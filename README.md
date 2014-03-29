@@ -9,6 +9,8 @@ Simple Pay Period generating JS Library
  The dayOfWeek is simply the day of the week (0-6) of the first week of the year.
  So, a dayOfWeek of 0, is the Sunday of the first week of January. If the week starts on Monday for a division, we would simply specify '1'
 
+---
+
 ### Bi-Week:
 
  	PayPeriods.biweek(year, dayOffset);
@@ -17,7 +19,9 @@ Simple Pay Period generating JS Library
  First, the starting date set to be the Sunday of the first week of the year.  By setting a negative value, we can move backwards if the region dictates it.
  So, running PayPeriods.biweek(2013,-7) would have the first biweek of Dec. 23, 2012 to Jan. 5, 2013.
 
- ### Semi-Monthly:
+---
+
+### Semi-Monthly:
 
  	PayPeriods.semimonth(year, start1, start2);
 
@@ -33,7 +37,9 @@ Simple Pay Period generating JS Library
 
  NOTE: 0 for a start date is the same as a 1, and the end CANNOT be 0
 
- ### Month:
+---
+
+### Month:
 
  	PayPeriods.month(year, start);
 
