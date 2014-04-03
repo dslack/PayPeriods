@@ -125,7 +125,7 @@
             months.push({year: year,id: idx,startDate: startDt.clone().toDate(), endDate: endDt.clone().toDate()});
 
             startDt = startDt.clone().add('M',1);
-            endDt = endDt.clone().add("M",1);
+            endDt = startDt.clone().add("M",1).subtract('days',1);
             idx+= 1;
         }
         return months;
