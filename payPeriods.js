@@ -76,6 +76,7 @@
             .date(start)
             .hour(0).minute(0).second(0);
         startingDate = startDt.clone().add('year',1).subtract('day',1);
+        endDt = startDt.clone();
 
         while (startDt.isBefore(startingDate) && !startDt.isSame(startingDate) && idx < 100) {
             endDt.hour(23).minute(59).second(59);
