@@ -45,8 +45,8 @@
             endDt.hour(23).minute(59).second(59);
             weeks.push({year: year,id: idx,startDate: startDt.clone().toDate(), endDate: endDt.clone().toDate()});
 
-            startDt = endDt.clone().add('d',1);
-            endDt = startDt.clone().add('d',6);
+            startDt = startDt.add('d',7);
+            endDt = endDt.add('d',7);
             idx+= 1;
         }
         return weeks;
@@ -76,11 +76,10 @@
             .date(start)
             .hour(0).minute(0).second(0);
         startingDate = startDt.clone().add('year',1).subtract('day',1);
-        endDt = startDt.clone();
 
         while (startDt.isBefore(startingDate) && !startDt.isSame(startingDate) && idx < 100) {
-            endDt.hour(23).minute(59).second(59);
             endDt = startDt.clone().date(endFn(startDt));
+            endDt.hour(23).minute(59).second(59);
             //if the End Date is before the Start Dt
             if (endDt.isBefore(startDt)) {
                 endDt = endDt.add('M',1);
@@ -110,7 +109,7 @@
         return semiMonths;
     };
 
-    obj.month = function(year, start){        
+    obj.month = function(year, start){
         var startDt, endDt, months = [], idx = 0, endYear;
         momentCheck();
 
@@ -133,7 +132,7 @@
     };
 
     function makeGlobal() {
-        global['payPeriods'] = PayPeriods;  
+        global['payPeriods'] = PayPeriods;
     }
 
     if (hasModule) {
