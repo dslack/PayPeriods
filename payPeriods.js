@@ -15,8 +15,12 @@
     obj.biweek = function(year, start){
         var dates = [], idx = 0, endDt, dt;
         momentCheck();
+
+        year = moment()
+            .add('day',-1*start)
+            .weekYear();
         dt = moment()
-            .weekYear(year)
+            .year(year)
             .startOf('year')
             .day(0).add('day',start)
             .hour(0).minute(0).second(0);
@@ -65,7 +69,7 @@
 
         endFn = function(){
             return end-1;
-        }
+        };
         if (end < 0) {
             endFn = function(date){
                 return date.clone().endOf('month').date();
