@@ -16,9 +16,9 @@
         var dates = [], idx = 0, endDt, dt;
         momentCheck();
 
-        year = moment()
-            .add('day',-1*start)
-            .weekYear();
+        //year = moment()
+        //    .add('day',-1*start)
+        //    .weekYear();
         dt = moment()
             .year(year)
             .startOf('year')
