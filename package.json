@@ -1,0 +1,19 @@
+{
+  "name": "payperiods",
+  "version": "1.0.0",
+  "description": "Pay Periods Wrapper",
+  "main": "payPeriods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dslack/PayPeriods.git"
+  },
+  "author": "Dan Slack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dslack/PayPeriods/issues"
+  },
+  "homepage": "https://github.com/dslack/PayPeriods#readme"
+}
